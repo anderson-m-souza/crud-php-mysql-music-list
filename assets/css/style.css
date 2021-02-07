@@ -1,0 +1,374 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../font/Ubuntu-Regular.woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../font/Ubuntu-Bold.woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+:root {
+    --font-color: #999;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+pre {
+    font-family: monospace;
+    color: #149414;
+    line-height: 21px;
+    width: 1200px;
+    max-width: 100%;
+    margin: 20px auto 40px;
+}
+
+.body {
+    background-color: #000;
+    font-family: 'Ubuntu';
+    font-size: 15px;
+    font-weight: 400;
+    overflow-x: hidden;
+    color: var(--font-color);
+    width: 100vw;
+}
+
+::selection {
+    color: #000;
+    background-color: #BBB;
+}
+
+::-moz-selection {
+    color: #000;
+    background-color: #555;
+}
+
+body::-webkit-scrollbar {
+    background: #000;
+    width: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #686868;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background: #333;
+}
+
+/* ui */
+
+.ui__title {
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+/* = header */
+
+.header {
+    width: 100%;
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo-box {
+    display: block;
+    width: 40px;
+    max-width: 100%;
+}
+
+.header__logo {
+    width: 100%;
+}
+
+.header__menu-list {
+    display: flex;
+}
+
+.header__menu-item:nth-child(n + 2) {
+    margin-left: 25px;
+}
+
+.header__menu-link {
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    line-height: 20px;
+    transition: color 0.1s;
+}
+
+.header__menu-link:hover {
+    color: #686868;
+}
+
+.header__menu-link:active {
+    color: #333;
+}
+
+/* = table */
+
+.table__container {
+    width: 100%;
+}
+
+.table__box {
+    max-width: 1200px;
+    padding: 0 20px;
+    width: 100%;
+    margin: 0 auto 30px;
+}
+
+.table {
+    width: 100%;
+    max-width: calc(100vw - 40px);
+}
+
+.table__row:nth-child(n + 2) {
+    border-top: 1px solid #444;
+}
+
+.table__column {
+    padding: 15px;
+}
+
+.table__column--title {
+    text-align: left;
+    font-weight: 700;
+}
+
+.table__column--track {
+    padding-left: 0;
+}
+
+.table__column--data:first-child {
+    text-align: center;
+    width: 40px;
+}
+
+.table__column--edit {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.table__edit-row {
+    line-height: 45px;
+    text-decoration: none;
+    color: var(--font-color);
+    display: block;
+    text-align: right;
+    transition: color 0.1s;
+    text-align: center;
+}
+
+.table__edit-row:hover {
+    color: #686868;
+}
+
+.table__column--delete {
+    padding: 0;
+}
+
+.table__delete-row {
+    text-decoration: none;
+    color: var(--font-color);
+    display: inline-block;
+    transition: color 0.1s;
+    line-height: 45px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.table__delete-row:hover {
+    color: #686868;
+}
+
+.table__delete-input:not(:checked) + .table__delete-modal,
+.table__delete-input:not(:checked) + .table__delete-modal + .table__delete-overlay {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.table__delete-modal {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    padding: 20px;
+    background-color: #333;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.table__delete-warning {
+    width: 100%;
+    text-align: center;
+    color: #CCC;
+    margin-bottom: 20px;
+}
+
+.table__delete-no {
+    display: block;
+    width: 160px;
+    line-height: 40px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: #686868;
+    color: #000;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0 20px;
+}
+
+.table__delete-yes {
+    display: block;
+    width: 160px;
+    line-height: 40px;
+    margin-left: 10px;
+    text-align: center;
+    background-color: #686868;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0 20px;
+}
+
+.table__delete-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* = add-music */
+
+.add-music {
+    padding: 0 20px;
+}
+
+.add-music__container {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    width: 100%;
+}
+
+/* = edit-music */
+
+.edit-music {
+    padding: 0 20px;
+}
+
+.edit-music__container {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    width: 100%;
+}
+
+/* = form */
+
+::placeholder {
+    color: #ccc;
+    opacity: 1;
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+}
+
+:focus::placeholder {
+    opacity: 0;
+}
+
+.form {
+    margin-top: 30px;
+    max-width: 500px;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.form__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form__input {
+    width: 100%;
+    line-height: 40px;
+    padding: 0 10px;
+    border: none;
+    background-color: #333;
+    color: #ccc;
+    outline: 2px solid transparent;
+    transition: outline-color 0.1s;
+    box-sizing: border-box;
+}
+
+.form__input:focus {
+    outline-color: #ccc;
+}
+
+.form__input:nth-last-child(n + 2) {
+    margin-bottom: 10px;
+}
+
+.form__submit {
+    margin-top: 15px;
+    width: 100%;
+    line-height: 40px;
+    color: #CCC;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.form__submit:hover {
+    background-color: #444;
+}
+
+/* = footer */
+
+.footer {
+    margin-top: 150px;
+    width: 100vw;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.footer__text {
+    font-size: 12px;
+}

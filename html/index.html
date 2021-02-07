@@ -1,0 +1,38 @@
+<section class="table__container">
+    <div class="table__box">
+        <h1 class="ui__title">Musics</h1>
+        <table class="table">
+            <tr class="table__row">
+                <th class="table__column table__column--title table__column--track">Track</th>
+                <th class="table__column table__column--title table__column--music">Music</th>
+                <th class="table__column table__column--title table__column--artist">Artist</th>
+                <th class="table__column table__column--title table__column--album">Album</th>
+                <th class="table__column table__column--title table__column--release">Release</th>
+            </tr>
+            <?php foreach ($musics->table as $row): ?>
+                <tr class="table__row">
+                    <td class="table__column table__column--data table__column--track"><?= $row['track'] ?></td>
+                    <td class="table__column table__column--data table__column--music"><?= $row['music'] ?></td>
+                    <td class="table__column table__column--data table__column--artist"><?= $row['artist'] ?></td>
+                    <td class="table__column table__column--data table__column--album"><?= $row['album'] ?></td>
+                    <td class="table__column table__column--data table__column--release"><?= $row['release'] ?></td>
+                    <td class="table__column table__column--data table__column--edit">
+                        <a href="edit-music.php?number=<?= $row['number'] ?>" class="table__edit-row">Edit</a>
+                    </td>
+                    <td class="table__column table__column--data table__column--delete">
+                        <label class="table__delete-row" for="<?= $row['number'] ?>">Delete</label>
+                    </td>
+                </tr>
+            <?php endforeach ?>
+        </table>
+    </div>
+    <?php foreach ($musics->table as $row): ?>
+        <input class="table__delete-input" id="<?= $row['number'] ?>" type="checkbox" hidden>
+        <section class="table__delete-modal">
+            <p class="table__delete-warning">Are you shure?</p>
+            <label class="table__delete-no" for="<?= $row['number'] ?>">No</label>
+            <a class="table__delete-yes" href="delete-music.php?number=<?= $row['number'] ?>">Yes</a>
+        </section>
+        <label class="table__delete-overlay" for="<?= $row['number'] ?>"></label>
+    <?php endforeach ?>
+</section>

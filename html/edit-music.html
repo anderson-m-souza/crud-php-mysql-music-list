@@ -1,0 +1,16 @@
+<section class="edit-music">
+    <div class="edit-music__container">
+        <h1 class="ui__title">Edit music</h1>
+        <form class="form" action="edit-music-post.php" method="post">
+            <fieldset class="form__fieldset">
+                <input type="number" name="track" class="form__input" value="<?= $music->track ?>" placeholder="Track" required>
+                <input type="text" name="music" class="form__input" value="<?= $music->music ?>" placeholder="Music" required>
+                <input type="text" name="artist" class="form__input" value="<?= $music->artist ?>" placeholder="Artist" required>
+                <input type="text" name="album" class="form__input" value="<?= $music->album ?>" placeholder="Album" required>
+                <input type="date" name="release" class="form__input" value="<?= $music->release ?>" placeholder="Release" required>
+                <input type="hidden" name="number" value="<?= $music->number ?>">
+            </fieldset>
+            <button class="form__submit" type="submit">Edit music</button>
+        </form>
+    </div>
+</section>
