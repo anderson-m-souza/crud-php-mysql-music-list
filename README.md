@@ -1,19 +1,29 @@
-O objetivo desse projeto foi implementar um CRUD para a inserção, apresentação, alteração e exclusão de dados.
+# Music list
 
-O banco de dados utilizado foi o MySQL. Exportei uma cópia do BD que criei para a pasta sql.
+CRUD com PHP e MySQL
 
-No back-end, utilizei o paradigma de programação orientado a objetos, com o PHP versão 7.4.4. E tentei seguir ao máximo as PSRs.
+### Objetivo
 
-Criei arquivos distintos para HTML e PHP. Porém, como não usei nehuma template engine, foi necessário colocar alguns códigos de PHP dentro dos arquivos HTML, para printar informações e fazer loops. Mas tudo da forma mais organizada possível.
+O objetivo desse projeto foi implementar um site para a inserção, apresentação, alteração e exclusão de dados de músicas.
 
-No front-end foi usado apenas HTML5 e CSS3, com a metodologia BEM (Block Element Modifier) para a nomeação de classes.
+### Tecnologias
+
+- MySQL: O banco de dados utilizado foi o MySQL. Exportei uma cópia do BD que criei para a pasta sql.
+
+- PHP: No back-end, utilizei o paradigma de programação orientado a objetos, com o PHP versão 7.4.4. E tentei seguir ao máximo as PSRs.
+
+- HTML5: Criei arquivos distintos para HTML e PHP. Porém, como não usei nehuma template engine, foi necessário colocar alguns códigos de PHP dentro dos arquivos HTML, para printar informações e fazer loops. Mas tudo da forma mais organizada possível.
+
+- CSS3: Metodologia BEM (Block Element Modifier) para a nomeação de classes.
 http://getbem.com/
 
-As fontes foram baixadas do Google Fonts e carregadas localmente.
+- Fontes: As fontes foram baixadas do Google Fonts e carregadas localmente.
 https://fonts.google.com/specimen/Ubuntu?query=ubun&preview.text_type=custom
 
-E o ícone de headphones foi baixado do Fontawesome.
+- Ícones: E o ícone de headphones foi baixado do Fontawesome.
 https://fontawesome.com/icons/headphones?style=solid
+
+### Site
 
 O site consiste nas páginas Home, Add music e Edit.
 
@@ -25,4 +35,12 @@ Dentro da tabela tem um botão Edit para cada música, que leva para a página o
 
 Ainda dentro da tabela, há um botão Delete, que permite a exclusão de todos os dados da música do banco de dados.
 
-Para testar o projeto, é necessário ter um servidor local tipo XAMPP configurado. Importar o arquivo music-list.sql da pasta sql para o banco de dados. E adicionar os dados do seu bd no arquivo config.php da pasta require.
+### Instalação
+
+1. Para testar o projeto, é necessário ter um servidor local tipo XAMPP configurado.
+
+2. Importar o arquivo music-list.sql da pasta sql para o banco de dados.
+
+3. Adicionar os dados do seu BD no arquivo config.php da pasta require.
+
+4. Abrir o site no seu localhost.
