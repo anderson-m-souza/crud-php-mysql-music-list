@@ -25,15 +25,19 @@ O objetivo foi implementar um site para a inserção, apresentação, alteraçã
 O site consiste nas páginas Home, Add music e Edit.
 
 Na Home aparece a tabela com informações (número da faixa, título, artista, álbum, ano de lançamento) de todas as músicas do banco de dados.
+
 ![página inicial](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/readme-files/home-screenshot.png)
 
 Na Add music, é onde pode ser inserida uma nova música no banco de dados.
+
 ![página add music](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/readme-files/add-music-screenshot.png)
 
 Dentro da tabela tem um botão Edit para cada música, que leva para a página onde se edita os dados da mesma.
+
 ![página add music](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/readme-files/edit-music-screenshot.png)
 
 Ainda dentro da tabela, há um botão Delete, que permite a exclusão de todos os dados da música do banco de dados.
+
 ![página add music](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/readme-files/delete-music-screenshot.png)
 
 ### Instalação
