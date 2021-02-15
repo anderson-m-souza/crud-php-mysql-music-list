@@ -29,7 +29,7 @@
     <?php foreach ($musics->table as $row): ?>
         <input class="table__delete-input" id="<?= $row['number'] ?>" type="checkbox" hidden>
         <section class="table__delete-modal">
-            <p class="table__delete-warning">Are you shure?</p>
+            <p class="table__delete-warning">Are you sure?</p>
             <label class="table__delete-no" for="<?= $row['number'] ?>">No</label>
             <a class="table__delete-yes" href="delete-music.php?number=<?= $row['number'] ?>">Yes</a>
         </section>
