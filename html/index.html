@@ -17,7 +17,7 @@
                     <td class="table__column table__column--data table__column--album"><?= $row['album'] ?></td>
                     <td class="table__column table__column--data table__column--release"><?= $row['release'] ?></td>
                     <td class="table__column table__column--data table__column--edit">
-                        <a href="edit-music.php?number=<?= $row['number'] ?>" class="table__edit-row">Edit</a>
+                        <a href="edit-music?number=<?= $row['number'] ?>" class="table__edit-row">Edit</a>
                     </td>
                     <td class="table__column table__column--data table__column--delete">
                         <label class="table__delete-row" for="<?= $row['number'] ?>">Delete</label>
@@ -31,7 +31,7 @@
         <section class="table__delete-modal">
             <p class="table__delete-warning">Are you sure?</p>
             <label class="table__delete-no" for="<?= $row['number'] ?>">No</label>
-            <a class="table__delete-yes" href="delete-music.php?number=<?= $row['number'] ?>">Yes</a>
+            <a class="table__delete-yes" href="delete-music?number=<?= $row['number'] ?>">Yes</a>
         </section>
         <label class="table__delete-overlay" for="<?= $row['number'] ?>"></label>
     <?php endforeach ?>

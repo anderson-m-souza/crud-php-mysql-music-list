@@ -8,7 +8,7 @@ try {
     $music = new Music($_GET);
     $music->delete();
     
-    header('Location: index.php');
+    header('Location: ./');
 } catch(Exception $error) {
     Error::exception($error);
 }    
