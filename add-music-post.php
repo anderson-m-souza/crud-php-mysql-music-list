@@ -8,7 +8,7 @@ try {
     $music = new Music($_POST);
     $music->addNew();
     
-    header('Location: index.php');
+    header('Location: ./');
 } catch(Exception $error) {
     Error::exception($error);
 }
