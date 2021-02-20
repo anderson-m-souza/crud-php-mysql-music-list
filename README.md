@@ -1,51 +1,53 @@
 # Music list
 
-CRUD com PHP e MySQL
+[versão em português](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/README-pt-br.md)
 
-### Objetivo
+CRUD with PHP and MySQL
 
-O objetivo foi implementar um site para a inserção, apresentação, alteração e exclusão de dados de músicas. E com isso praticar as tecnologias mencionadas abaixo.
+### Goals
 
-### Tecnologias
+The goals were to make a site to add, show, edit and delete music data. And to practice the technologies below.
 
-- MySQL: O banco de dados utilizado foi o MySQL. Exportei uma cópia do BD que criei para a pasta sql.
+### Technologies
 
-- PHP: No back-end, utilizei o paradigma de programação orientado a objetos, com o PHP versão 7.4.4. E tentei seguir ao máximo as [PSRs](https://www.php-fig.org/).
+- MySQL: I've used MySQL database. There is a copy of my DB in the "sql" folder.
 
-- HTML5: Criei arquivos distintos para HTML e PHP. Porém, como não usei nehuma template engine, foi necessário colocar alguns códigos de PHP dentro dos arquivos HTML, para printar informações e fazer loops. Mas tudo da forma mais organizada possível.
+- PHP: For back-end I've used: object-oriented programming paradigm; PHP version 7.4.4; and the [PSRs](https://www.php-fig.org/).
 
-- CSS3: [Metodologia BEM (Block Element Modifier)](http://getbem.com/) para a nomeação de classes.
+- HTML5: I've created different files for HTML and PHP code. But since I did not use a template engine, it was necessary to add some PHP code inside the HTML files to print and loop through data. I did it the most organized way I could.
 
-- Fontes: As fontes foram baixadas do [Google Fonts](https://fonts.google.com/specimen/Ubuntu?query=ubun&preview.text_type=custom) e carregadas localmente.
+- CSS3: [BEM methodology (Block Element Modifier)](http://getbem.com/) to name classes.
 
-- Ícones: E o ícone de headphones foi baixado do [Fontawesome](https://fontawesome.com/icons/headphones?style=solid).
+- Fonts: Fonts were downloaded from [Google Fonts](https://fonts.google.com/specimen/Ubuntu?query=ubun&preview.text_type=custom) and loaded locally.
+
+- Icons: The headphones icon was downloaded from [Fontawesome](https://fontawesome.com/icons/headphones?style=solid).
 
 ### Site
 
-O site consiste nas páginas Home, Add music e Edit.
+The site consists of "Home", "Add music" and "Edit".
 
-Na Home aparece a tabela com informações (número da faixa, título, artista, álbum, ano de lançamento) de todas as músicas do banco de dados.
+The "Home" page shows the table of information (track, title, artist, album, release) of all music in the database.
 
-![página inicial](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/readme-files/home-screenshot.png)
+![home page](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/readme-files/home-screenshot.png)
 
-Na Add music, é onde pode ser inserida uma nova música no banco de dados.
+"Add music" page is where you can add a new music to the DB.
 
-![página add music](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/readme-files/add-music-screenshot.png)
+![add music page](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/readme-files/add-music-screenshot.png)
 
-Dentro da tabela tem um botão Edit para cada música, que leva para a página onde se edita os dados da mesma.
+There is an "Edit" button next to each song that leads to the edit page.
 
-![página add music](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/readme-files/edit-music-screenshot.png)
+![edit music page](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/readme-files/edit-music-screenshot.png)
 
-Ainda dentro da tabela, há um botão Delete, que permite a exclusão de todos os dados da música do banco de dados.
+There is also a "Delete" button on the right that deletes every information of that music from the DB.
 
-![página add music](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/readme-files/delete-music-screenshot.png)
+![delete music page](https://github.com/anderson-m-souza/crud-php-mysql-music-list/blob/master/readme-files/delete-music-screenshot.png)
 
-### Instalação
+### Instalation
 
-1. Para testar o projeto, é necessário ter um servidor local tipo XAMPP configurado.
+1. Configure a local server (XAMPP, WAMPP etc).
 
-2. Importar o arquivo music-list.sql da pasta sql para o banco de dados.
+2. Import the file "music-list.sql" from the "sql" folder to the DB. Or you can add some music later.
 
-3. Adicionar os dados do seu BD no arquivo config.php da pasta src/require/.
+3. Add your DB info on the "config.php" file at the "src/require/" folder.
 
-4. Abrir o site no seu localhost.
+4. Open the site in your localhost.
